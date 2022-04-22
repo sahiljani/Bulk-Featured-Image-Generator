@@ -1,0 +1,246 @@
+.form_container{
+    display: flex;
+}
+
+.form_container form{
+    width: 35%;
+}
+.form_container div{
+    width: 65%;
+}
+
+input:disabled {
+    background: #dddddd;
+  }
+
+
+#render_img{
+    position: fixed;
+}
+
+/* .settings-form-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
+
+
+.set_all_output{
+   
+	width: 70%;
+    max-height: 279px;
+    overflow-y: scroll;
+    margin: auto;
+    /* border: 2px solid black; */
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+    border-image-source: linear-gradient(to left, #ef4444, #23c55f);
+   
+} 
+
+.set_all_output::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.set_all_output::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+
+
+.set_all_output::-webkit-scrollbar-thumb
+{
+	background-color: #F90;	
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+/* #sbmtbtn{
+	color: black;
+    background-color: #ffad33;
+    border: 0;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+		 appearance: none;
+ background-color: transparent;
+ border: 2px solid #ffad33;
+ border-radius: 0.6em;
+
+ cursor: pointer;
+ 
+
+
+ text-transform: uppercase;
+
+}
+
+
+#sbmtbtn:hover, #sbmtbtn:focus {
+	color: #fff;
+	outline: 0;
+	box-shadow: 0 0 40px 40px #7c4a00 inset;
+  } */
+
+
+
+
+  .action-btn {
+	background-color: #FF7F00;
+	border: none;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 0.5em 1.25em;
+	color: white;
+	border-radius: 0.15em;
+	transition: 0.3s;
+	cursor: pointer;
+	position: relative;
+	display: block;
+  }
+  
+  .action-btn:hover {
+	background-color: #ff6600;
+  }
+  
+  .action-btn:focus {
+	outline: 0.05em dashed #ff6600; 
+	outline-offset: 0.05em;
+  }
+  
+  .action-btn::after {
+	content: '';
+	display: block;
+	width: 1.2em;
+	height: 1.2em;
+	position: absolute;
+	left: calc(50% - 0.75em);
+	top: calc(50% - 0.75em);
+	border: 0.15em solid transparent;
+	border-right-color: white;
+	border-radius: 50%;
+	animation: button-anim 0.7s linear infinite;
+	opacity: 0;
+  }
+  
+  @keyframes button-anim {
+	from {
+	  transform: rotate(0);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  .action-btn.loading {
+	color: transparent;
+  }
+  
+  .action-btn.loading::after {
+	opacity: 1;
+  }
+  
+  /* em values are used to adjust button values such as padding, radius etc. based on font-size */
+
+
+  .chart {
+
+	width: 300px;
+	height: 300px;
+	top: 50%;
+	left: 50%;
+	/* margin: -225px 0 0 -225px; */
+  }
+  
+  .doughnutTip {
+	position: absolute;
+
+	min-width: 30px;
+	max-width: 300px;
+	padding: 5px 15px;
+	border-radius: 1px;
+	background: rgba(0, 0, 0, 0.8);
+	color: #ddd;
+	font-size: 17px;
+	text-shadow: 0 1px 0 #000;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.3;
+	letter-spacing: 0.06em;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+  }
+  .doughnutTip::after {
+	position: absolute;
+
+	left: 50%;
+	bottom: -6px;
+	content: "";
+	height: 0;
+	margin: 0 0 0 -6px;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-top: 6px solid rgba(0, 0, 0, 0.7);
+	line-height: 0;
+  }
+  
+  .doughnutSummary {
+    position: absolute;
+    top: 41%;
+    left: 12%;
+	
+	color: #d5d5d5;
+	text-align: center;
+	text-shadow: 0 -1px 0 #111;
+	cursor: default;
+  }
+  
+  .doughnutSummaryTitle {
+	position: absolute;
+
+	top: 50%;
+	width: 100%;
+	margin-top: -27%;
+	font-size: 22px;
+	letter-spacing: 0.06em;
+  }
+  
+  .doughnutSummaryNumber {
+	
+
+	top: 50%;
+	width: 100%;
+	
+	font-size: 55px;
+  }
+  
+  .chart path:hover {
+	opacity: 0.65;
+  }
+
+  
+  .flex {
+	  display: flex;
+  }
+
+
+  .space-around-center{
+  justify-content: space-around;
+  align-content: center;
+  align-items: start;
+  }
